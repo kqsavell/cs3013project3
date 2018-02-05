@@ -1,7 +1,8 @@
 # Kyle Savell & Antony Qin
 
-all: clean p3.c
-	gcc -Wall -pthread -g p3.c -o p3 -lm
+all: clean bathroomSim.c
+	gcc -Wall -pthread -g bathroomSim.c bathroom.h -o bathroomSim -lm
 
 clean:
-	rm -f p3
+	rm -f bathroomSim
+
