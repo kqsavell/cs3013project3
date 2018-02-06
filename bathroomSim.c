@@ -57,9 +57,15 @@ void* Individual(void *input)
     {
         pthread_mutex_lock(&lock);
 
+        char* gender;
+            if((int)g == 0)
+                gender = "A guy";
+            else
+                gender = "A gal";
+
         while(bathroom->status != vacant && bathroom->status != g+1) // Not empty and filled with opposite gender
         {
-            printf("Yes, I am waiting because the bathroom is occupied with the opposite gender.");
+            printf("Yes, I (%s) am waiting because the bathroom is occupied with the opposite gender.\n", gender);
             pthread_cond_wait(&g_cond, &lock);
         }
 
@@ -68,15 +74,11 @@ void* Individual(void *input)
             bathroom->avgPpl++;
             bathroom->status = g+1;
 
-            char* gender;
-            if((int)g == 0)
-                gender = "A guy";
-            else
-                gender = "A gal";
             printf("%s has entered the bathroom\n", gender);
         }
 
         pthread_mutex_unlock(&lock);
+
         int rand_stay = norm_dist(mean_stay, (float)mean_stay/2);
         if(rand_stay <= 0)
             rand_stay = 1;
@@ -93,7 +95,11 @@ void* Individual(void *input)
 
         bathroom->avgPpl--;
         if(bathroom->avgPpl == 0)
+        {
             bathroom->status = vacant;
+            pthread_cond_signal (&g_cond);
+             printf("BATHROOM IS EMPTY\n\n");
+        }
 
         pthread_mutex_unlock(&lock);
     }
@@ -119,7 +125,7 @@ int main(int argc, char *argv[])
     srand(time(NULL));
     srand48(time(NULL));
     printf("Main Function\n");
-    pthread_t thread;
+
     int num_users = 10;
     int mean_arrival = 10;
     int mean_stay = 100;
@@ -155,6 +161,7 @@ int main(int argc, char *argv[])
 
     struct args *new_args;
     //Enter thread-making loop
+    pthread_t threads[num_users];
     for (int i = 0; i < num_users; i++)
     {
 
@@ -186,9 +193,10 @@ int main(int argc, char *argv[])
         printf("mean stay is: %d\n", new_args->stay );
         printf("mean loop count is: %d\n", new_args->loops);
 
-        pthread_create(&thread, NULL, Individual, (void*)new_args);
-        pthread_join(thread, NULL);
+        pthread_create(&threads[i], NULL, Individual, (void*)new_args);
     }
+    for(int i = 0; i < num_users; i++)
+        pthread_join(threads[i], NULL);
 
     Finalize();
 
