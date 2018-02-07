@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
-#include <time.h>
+#include <sys/time.h>
 #include <math.h>
 #include <pthread.h>
 #include <unistd.h>
@@ -25,11 +25,13 @@ struct args {
 struct monitor {
 	int occupants[100];
 	enum filled_with status;
-	
+
 	int numUsages;
-	int totalTime;
+	float totalTime;
 	float avgQueue;
 	float avgPpl;
+	struct timeval curStart;
+	struct timeval curEnd;
 };
 
 void Enter(enum gender g); //Enter bathroom, set state if needed
