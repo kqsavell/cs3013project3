@@ -15,23 +15,24 @@ enum gender {male, female};
 enum filled_with {vacant, males, females};
 
 // Struct for input arguments for threads
-struct args {
-	enum gender person;
-	int arrival;
-	int stay;
-	int loops;
+struct args
+{
+    enum gender person;
+    int arrival;
+    int stay;
+    int loops;
 };
 // Struct for bathroom
-struct monitor {
-	int occupants[100];
-	enum filled_with status;
+struct monitor
+{
+    int occupants[100];
+    enum filled_with status;
 
-	int numUsages;
-	float totalTime;
-	float avgQueue;
-	float avgPpl;
-	struct timeval curStart;
-	struct timeval curEnd;
+    int numUsages;
+    float totalTime;
+    float currPpl;
+    struct timeval curStart;
+    struct timeval curEnd;
 };
 
 void Enter(enum gender g); //Enter bathroom, set state if needed

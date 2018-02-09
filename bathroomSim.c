@@ -19,8 +19,6 @@ int norm_dist(int mean, float std)
     float a = drand48();
     float b = drand48();
     float x = (sqrt(-2 * log(a)) * cos(2 * M_PI * b));
-    //printf("%f\n", x);
-    //int y = (sqrt(-2 * log(a)) * sin(2 * M_PI * b));
     return (int)((x * std) + mean);
 }
 
@@ -32,8 +30,7 @@ void Initialize()
     bathroom->status = vacant;
     bathroom->numUsages = 0;
     bathroom->totalTime = 0;
-    bathroom->avgQueue = 0;
-    bathroom->avgPpl = 0;
+    bathroom->currPpl = 0;
 }
 
 void Finalize()
@@ -66,7 +63,7 @@ void* Individual(void *input)
     int rand_stay = norm_dist(mean_arrival, (float)mean_stay/2);
     if(rand_stay <= 0)
         rand_stay = 1;
-    sleep(rand_stay * 0.01);
+    usleep(rand_stay);
     //printf("I waited for %d units of time\n", rand_stay);
 
     // Attempt for thread to enter the bathroom
@@ -106,7 +103,7 @@ void* Individual(void *input)
             {
                 gettimeofday(&bathroom->curStart, NULL);
             }
-            bathroom->avgPpl++;
+            bathroom->currPpl++;
             bathroom->status = g+1;
             bathroom->numUsages++;
 
@@ -118,7 +115,7 @@ void* Individual(void *input)
         rand_stay = norm_dist(mean_stay, (float)mean_stay/2);
         if(rand_stay <= 0)
             rand_stay = 1;
-        sleep(rand_stay * 0.01);
+        usleep(rand_stay);
         //printf("I stayed for %d units of time\n", rand_stay);
     }
 
@@ -129,8 +126,8 @@ void* Individual(void *input)
 
         //printf("Occupant is leaving the bathroom\n\n");
 
-        bathroom->avgPpl--;
-        if(bathroom->avgPpl == 0)
+        bathroom->currPpl--;
+        if(bathroom->currPpl == 0)
         {
             gettimeofday(&bathroom->curEnd, NULL);
             //printf("Start time s: %ld, ms: %ld\n", bathroom->curStart.tv_sec, bathroom->curStart.tv_usec);
@@ -138,7 +135,7 @@ void* Individual(void *input)
             float total_stay = ((bathroom->curEnd.tv_sec - bathroom->curStart.tv_sec)*1000 + ((float)bathroom->curEnd.tv_usec - (float)bathroom->curStart.tv_usec)/1000);
             bathroom->totalTime += total_stay;
             bathroom->status = vacant;
-            pthread_cond_signal (&g_cond);
+            pthread_cond_broadcast (&g_cond);
              printf("BATHROOM IS EMPTY\n\n");
         }
 
@@ -185,7 +182,7 @@ int main(int argc, char *argv[])
     srand48(time(NULL));
     printf("Main Function\n");
 
-    int num_users = 100;
+    int num_users = 2;
     int mean_arrival = 10;
     int mean_stay = 10;
     int mean_loop = 3;
