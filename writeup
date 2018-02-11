@@ -1,0 +1,14 @@
+Project 3
+Kyle Savell & Antony Qin
+
+FILES:
+
+CONTROL MODULE:
+
+HOW IT WORKS:
+
+INVARIANTS:
+Lock called g_lock called in Enter() function. Thread comes in, cannot modify bathroom->status or bathroom->currPpl unless it has the lock. Thread can exit Enter() function only if it is the same gender as bathroom->status (or bathroom->status is vacant). Before thread exits Enter(), bathroom->status is the gender of the thread, and bathroom->currPpl is +1 greater than before the thread entered. Threads that can't exit Enter(), wait for a signal. 
+Lock called g_lock called in Leave() function. Thread comes in, cannot modify bathroom->status or bathroom->currPpl unless it has the lock. Before thread exits Leave(), bathroom->currPpl is -1 less than before the thread entered. After bathroom->currPpl is decremented, before the thread leaves Leave(), if bathroom->currPpl is 0, then bathroom->status is vacant, and a signal is sent to all the theads waiting in the Enter() function. 
+Threads that have received the signal in Enter, recheck that the bathroom->status is their repectie gender/vacant with a while loop, before continuing to exit the Enter() function.
+Therefore: Only one thread (person) at a time can modify bathroom->currPeople and bathroom->status.
