@@ -9,9 +9,9 @@ struct monitor *bathroom;
 // Counts total number of threads that are created
 int total_threads = 0;
 
-pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER; // Lock for protecting bathroom struct
 pthread_mutex_t plock = PTHREAD_MUTEX_INITIALIZER; // Lock for printing output
-pthread_cond_t g_cond = PTHREAD_COND_INITIALIZER;
+pthread_cond_t g_cond = PTHREAD_COND_INITIALIZER; // Gender condition, makes sure multiple genders don't enter bathroom at the same time
 
 /* -- Functions -- */
 
@@ -167,7 +167,6 @@ void* Individual(void *input)
         pthread_mutex_unlock(&lock);
     }
 
-    //printf("Loop Count: %d\n", num_loops);
     if (num_loops > 0)
     {
         for (int i = 0; i < num_loops; i++)
