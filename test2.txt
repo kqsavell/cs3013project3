@@ -1,0 +1,15 @@
+Main Function
+139845440276224 (A gal) has entered the bathroom
+BATHROOM IS EMPTY
+
+
+Thread 139845440276224 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Statistics of Bathroom:
+Total threads: 1
+Number of times bathroom used: 1
+Total time bathroom was not empty (microsseconds): 1.575

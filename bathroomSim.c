@@ -6,6 +6,7 @@
 // Actual bathroom structure
 struct monitor *bathroom;
 
+// Counts total number of threads that are created
 int total_threads = 0;
 
 pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
@@ -14,10 +15,14 @@ pthread_cond_t g_cond = PTHREAD_COND_INITIALIZER;
 
 /* -- Functions -- */
 
+// Gets a random normal distribution value based on mean and standard deviation
 int norm_dist(int mean, float std)
 {
+    // Get the random values
     float a = drand48();
     float b = drand48();
+
+    // Calculate using normal distribution
     float x = (sqrt(-2 * log(a)) * cos(2 * M_PI * b));
     return (int)((x * std) + mean);
 }
@@ -35,23 +40,25 @@ void Initialize()
 
 void Finalize()
 {
+    // Prints statistics for bathroom
     printf("\nStatistics of Bathroom:\n");
     printf("Total threads: %d\n", total_threads);
     printf("Number of times bathroom used: %d\n", bathroom->numUsages);
-    printf("Total time bathroom was not empty (ms): %.3f\n", bathroom->totalTime);
+    printf("Total time bathroom was not empty (microsseconds): %.3f\n", bathroom->totalTime);
 }
 
 // Function that runs inside the thread that tries to enter/leave bathroom
 void* Individual(void *input)
 {
+    // Copy data from input struct to local variables
     struct args *my_args = (struct args *)input;
-
     enum gender per_gender = my_args->person;
     int mean_arrival = my_args->arrival;
     int mean_stay = my_args->stay;
     int num_loops = my_args->loops;
     free(input);
 
+    // Define additional local variables
     struct timeval wait_start;
     struct timeval wait_end;
     int wait_counter = 0;
@@ -64,7 +71,6 @@ void* Individual(void *input)
     if(rand_stay <= 0)
         rand_stay = 1;
     usleep(rand_stay);
-    //printf("I waited for %d units of time\n", rand_stay);
 
     // Attempt for thread to enter the bathroom
     void Enter(enum gender g)
@@ -79,44 +85,56 @@ void* Individual(void *input)
 
         while(bathroom->status != vacant && bathroom->status != g+1) // Not empty and filled with opposite gender
         {
+            // Start current wait timer
             gettimeofday(&wait_start, NULL);
             wait_counter += 1;
-            printf("Yes, I (%s) am waiting because the bathroom is occupied with the opposite gender.\n", gender);
+
+            pthread_mutex_lock(&plock);
+            printf("Yes, %ld (%s) am waiting because the bathroom is occupied with the opposite gender.\n", pthread_self(), gender);
+            pthread_mutex_unlock(&plock);
+
+            // Wait for bathroom to be vacant
             pthread_cond_wait(&g_cond, &lock);
+
+            // Queue statistics
             gettimeofday(&wait_end, NULL);
             float total_wait = ((wait_end.tv_sec - wait_start.tv_sec)*1000 + ((float)wait_end.tv_usec - (float)wait_start.tv_usec)/1000);
-            if ((wait_min == 0) || (total_wait < wait_min))
+            if ((wait_min == 0) || (total_wait < wait_min)) // Min waiting time for thread
             {
                 wait_min = total_wait;
             }
-            if ((wait_max == 0) || (total_wait > wait_max))
+            if ((wait_max == 0) || (total_wait > wait_max)) // Max wiating time for thread
             {
                 wait_max = total_wait;
             }
-            wait_ave += total_wait;
-
+            wait_ave += total_wait; // Average waiting time (not divded yet)
         }
 
         if ((bathroom->status == vacant) || (bathroom->status == g+1))
         {
+            // If vacant, start current stay timer
             if (bathroom->status == vacant)
             {
                 gettimeofday(&bathroom->curStart, NULL);
             }
+
+            // Increment bathroom counters and change status
             bathroom->currPpl++;
             bathroom->status = g+1;
             bathroom->numUsages++;
 
-            printf("%s has entered the bathroom\n", gender);
+            pthread_mutex_lock(&plock);
+            printf("%ld (%s) has entered the bathroom\n", pthread_self(), gender);
+            pthread_mutex_unlock(&plock);
         }
 
         pthread_mutex_unlock(&lock);
 
+        // Stay in bathroom for normally distrubted time
         rand_stay = norm_dist(mean_stay, (float)mean_stay/2);
         if(rand_stay <= 0)
             rand_stay = 1;
         usleep(rand_stay);
-        //printf("I stayed for %d units of time\n", rand_stay);
     }
 
     // Thread leaves the bathroom
@@ -124,19 +142,26 @@ void* Individual(void *input)
     {
         pthread_mutex_lock(&lock);
 
-        //printf("Occupant is leaving the bathroom\n\n");
-
+        // Decrement people in bathroom
         bathroom->currPpl--;
+
+        // If bathroom is empty, get stay time and send broadcast
         if(bathroom->currPpl == 0)
         {
+            // End current stay timer
             gettimeofday(&bathroom->curEnd, NULL);
-            //printf("Start time s: %ld, ms: %ld\n", bathroom->curStart.tv_sec, bathroom->curStart.tv_usec);
-            //printf("End time s: %ld, ms : %ld\n", bathroom->curEnd.tv_sec, bathroom->curEnd.tv_usec);
             float total_stay = ((bathroom->curEnd.tv_sec - bathroom->curStart.tv_sec)*1000 + ((float)bathroom->curEnd.tv_usec - (float)bathroom->curStart.tv_usec)/1000);
+
+            // Change status of bathroom
             bathroom->totalTime += total_stay;
             bathroom->status = vacant;
+
+            // Send signal to all waiting threads
             pthread_cond_broadcast (&g_cond);
-             printf("BATHROOM IS EMPTY\n\n");
+
+            pthread_mutex_lock(&plock);
+            printf("BATHROOM IS EMPTY\n\n");
+            pthread_mutex_unlock(&plock);
         }
 
         pthread_mutex_unlock(&lock);
@@ -153,6 +178,7 @@ void* Individual(void *input)
             Leave();
         }
 
+        // Get thread's gender
         char* gender;
             if((int)per_gender == 0)
                 gender = "A Guy";
@@ -171,96 +197,6 @@ void* Individual(void *input)
         pthread_mutex_unlock(&plock);
 
     }
-
-    return 0;
-}
-
-// Main function
-int main(int argc, char *argv[])
-{
-    srand(time(NULL));
-    srand48(time(NULL));
-    printf("Main Function\n");
-
-    int num_users = 2;
-    int mean_arrival = 10;
-    int mean_stay = 10;
-    int mean_loop = 3;
-
-    Initialize(); // Initialize bathroom
-
-    // Read command line
-    for (int i = 1; i < argc; i++)
-    {
-        if (i == 1)
-        {
-            num_users = atoi(argv[i]);
-        }
-        else if (i == 2)
-        {
-            mean_arrival = atoi(argv[i]);
-        }
-        else if (i == 3)
-        {
-            mean_stay = atoi(argv[i]);
-        }
-        else if (i == 4)
-        {
-            mean_loop = atoi(argv[i]);
-        }
-        else
-        {
-            printf("ERROR: Too many input arguments!\n");
-            return 1;
-        }
-    }
-
-    struct args *new_args;
-    //Enter thread-making loop
-    pthread_t threads[num_users];
-    for (int i = 0; i < num_users; i++)
-    {
-
-        // Generate gender
-        enum gender per_gender;
-        int gender_int = rand() % 2; // Either 0 or 1
-        if (gender_int == 0)
-        {
-            per_gender = male;
-        }
-        else
-        {
-            per_gender = female;
-        }
-
-        // Generate number of loops
-        int loop_count = norm_dist(mean_loop, (float)mean_loop/2);
-        if(loop_count <= 0)
-            loop_count = 1;
-
-        // Fill struct
-
-        new_args = malloc(sizeof(struct args));
-        new_args->person = per_gender;
-        new_args->arrival = mean_arrival;
-        new_args->stay = mean_stay;
-        new_args->loops = loop_count;
-
-        pthread_mutex_lock(&plock);
-        printf("mean arrival is: %d\n", new_args->arrival);
-        printf("mean stay is: %d\n", new_args->stay );
-        printf("mean loop count is: %d\n", new_args->loops);
-        pthread_mutex_unlock(&plock);
-
-        if (pthread_create(&threads[i], NULL, Individual, (void*)new_args) == 0)
-        {
-            total_threads++;
-        }
-    }
-    for(int i = 0; i < num_users; i++)
-        pthread_join(threads[i], NULL);
-
-    Finalize();
 
     return 0;
 }

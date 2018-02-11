@@ -1,0 +1,811 @@
+Main Function
+139950316463872 (A guy) has entered the bathroom
+Yes, 139950308071168 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+BATHROOM IS EMPTY
+
+
+Thread 139950316463872 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950324856576 (A gal) has entered the bathroom
+139950299678464 (A gal) has entered the bathroom
+139950308071168 (A gal) has entered the bathroom
+
+Thread 139950324856576 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139950299678464 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+
+Thread 139950308071168 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.087: Min wait 0.087: Average wait: 0.087
+
+139950291285760 (A guy) has entered the bathroom
+139950282893056 (A guy) has entered the bathroom
+139950291285760 (A guy) has entered the bathroom
+
+Thread 139950291285760 has finished:
+Gender: A Guy
+Number of loops: 2
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+
+Thread 139950282893056 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950274500352 (A guy) has entered the bathroom
+139950249322240 (A guy) has entered the bathroom
+Yes, 139950257714944 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139950249322240 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+
+Thread 139950274500352 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950266107648 (A guy) has entered the bathroom
+Yes, 139950215751424 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139950207358720 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139950257714944 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139950224144128 (A guy) has entered the bathroom
+
+Thread 139950266107648 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+139950224144128 (A guy) has entered the bathroom
+Yes, 139950190573312 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139950182180608 (A guy) has entered the bathroom
+Yes, 139950215751424 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139950207358720 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139950257714944 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139950173787904 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139950198966016 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139950148609792 (A guy) has entered the bathroom
+
+Thread 139950224144128 has finished:
+Gender: A Guy
+Number of loops: 2
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139950148609792 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950157002496 (A guy) has entered the bathroom
+Yes, 139950140217088 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139950182180608 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139950165395200 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139950131824384 (A guy) has entered the bathroom
+139950123431680 (A guy) has entered the bathroom
+139950115038976 (A guy) has entered the bathroom
+Yes, 139950089860864 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139950157002496 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139950240929536 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139950106646272 (A guy) has entered the bathroom
+139950081468160 (A guy) has entered the bathroom
+
+Thread 139950123431680 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139950131824384 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139950115038976 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139950098253568 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139950056290048 (A guy) has entered the bathroom
+Yes, 139950047897344 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139950056290048 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139950081468160 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+
+Thread 139950106646272 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950232536832 (A gal) has entered the bathroom
+139950073075456 (A gal) has entered the bathroom
+Yes, 139950064682752 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139950190573312 (A gal) has entered the bathroom
+139950215751424 (A gal) has entered the bathroom
+139950207358720 (A gal) has entered the bathroom
+139950257714944 (A gal) has entered the bathroom
+
+Thread 139950073075456 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950173787904 (A gal) has entered the bathroom
+139950198966016 (A gal) has entered the bathroom
+
+Thread 139950207358720 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.575: Min wait 0.134: Average wait: 0.354
+
+139950140217088 (A gal) has entered the bathroom
+
+Thread 139950173787904 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.612: Min wait 0.612: Average wait: 0.612
+
+
+Thread 139950215751424 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.548: Min wait 0.135: Average wait: 0.341
+
+139950165395200 (A gal) has entered the bathroom
+139950089860864 (A gal) has entered the bathroom
+
+Thread 139950198966016 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.641: Min wait 0.641: Average wait: 0.641
+
+
+Thread 139950257714944 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.600: Min wait 0.096: Average wait: 0.273
+
+
+Thread 139950140217088 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.565: Min wait 0.565: Average wait: 0.565
+
+
+Thread 139950089860864 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.527: Min wait 0.527: Average wait: 0.527
+
+
+Thread 139950165395200 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.578: Min wait 0.578: Average wait: 0.578
+
+139950240929536 (A gal) has entered the bathroom
+
+Thread 139950190573312 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.516: Min wait 0.516: Average wait: 0.516
+
+
+Thread 139950232536832 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950039504640 (A gal) has entered the bathroom
+
+Thread 139950240929536 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.651: Min wait 0.651: Average wait: 0.651
+
+BATHROOM IS EMPTY
+
+
+Thread 139950039504640 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950047897344 (A gal) has entered the bathroom
+139950098253568 (A gal) has entered the bathroom
+Yes, 139950064682752 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139950098253568 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.681: Min wait 0.681: Average wait: 0.681
+
+BATHROOM IS EMPTY
+
+
+Thread 139950047897344 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.655: Min wait 0.655: Average wait: 0.655
+
+139950064682752 (A guy) has entered the bathroom
+BATHROOM IS EMPTY
+
+
+Thread 139950064682752 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.521: Min wait 0.169: Average wait: 0.345
+
+139950031111936 (A guy) has entered the bathroom
+BATHROOM IS EMPTY
+
+
+Thread 139950031111936 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950022719232 (A gal) has entered the bathroom
+Yes, 139950005933824 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949972363008 (A gal) has entered the bathroom
+
+Thread 139950022719232 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949989148416 (A gal) has entered the bathroom
+
+Thread 139949989148416 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949955577600 (A gal) has entered the bathroom
+
+Thread 139949972363008 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949963970304 (A gal) has entered the bathroom
+139949947184896 (A gal) has entered the bathroom
+
+Thread 139949955577600 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949947184896 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949930399488 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+BATHROOM IS EMPTY
+
+
+Thread 139949963970304 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950014326528 (A gal) has entered the bathroom
+Yes, 139949913614080 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949905221376 (A gal) has entered the bathroom
+Yes, 139950005933824 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949922006784 (A gal) has entered the bathroom
+Yes, 139949930399488 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949905221376 (A gal) has entered the bathroom
+Yes, 139949880043264 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949871650560 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139949922006784 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949896828672 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949888435968 (A gal) has entered the bathroom
+
+Thread 139949905221376 has finished:
+Gender: A Gal
+Number of loops: 2
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949854865152 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949829687040 (A gal) has entered the bathroom
+139949863257856 (A gal) has entered the bathroom
+
+Thread 139949888435968 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949821294336 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949812901632 (A gal) has entered the bathroom
+139949804508928 (A gal) has entered the bathroom
+
+Thread 139949829687040 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949796116224 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139949863257856 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949812901632 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949804508928 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+139950014326528 (A gal) has entered the bathroom
+139949779330816 (A gal) has entered the bathroom
+139949762545408 (A gal) has entered the bathroom
+Yes, 139950005933824 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949930399488 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949880043264 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949871650560 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139949779330816 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949896828672 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139950014326528 has finished:
+Gender: A Gal
+Number of loops: 2
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949854865152 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949821294336 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949745760000 (A gal) has entered the bathroom
+Yes, 139949796116224 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949913614080 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139949762545408 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949754152704 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949770938112 (A gal) has entered the bathroom
+Yes, 139949728974592 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949787723520 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139949745760000 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949737367296 (A gal) has entered the bathroom
+139949720581888 (A gal) has entered the bathroom
+
+Thread 139949770938112 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949720581888 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+
+Thread 139949737367296 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139950005933824 (A guy) has entered the bathroom
+Yes, 139949712189184 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949703796480 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139949930399488 (A guy) has entered the bathroom
+139949880043264 (A guy) has entered the bathroom
+139949871650560 (A guy) has entered the bathroom
+139949838079744 (A guy) has entered the bathroom
+Yes, 139949938792192 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139949846472448 (A guy) has entered the bathroom
+Yes, 139949980755712 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+139949997541120 (A guy) has entered the bathroom
+139949687011072 (A guy) has entered the bathroom
+
+Thread 139950005933824 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.386: Min wait 0.239: Average wait: 0.336
+
+139949854865152 (A guy) has entered the bathroom
+
+Thread 139949846472448 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949821294336 (A guy) has entered the bathroom
+139949796116224 (A guy) has entered the bathroom
+139949913614080 (A guy) has entered the bathroom
+139949754152704 (A guy) has entered the bathroom
+139949728974592 (A guy) has entered the bathroom
+139949787723520 (A guy) has entered the bathroom
+
+Thread 139949754152704 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.410: Min wait 0.410: Average wait: 0.410
+
+139949896828672 (A guy) has entered the bathroom
+
+Thread 139949930399488 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.437: Min wait 0.050: Average wait: 0.289
+
+
+Thread 139949880043264 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.443: Min wait 0.318: Average wait: 0.380
+
+
+Thread 139949871650560 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.385: Min wait 0.379: Average wait: 0.382
+
+139949695403776 (A guy) has entered the bathroom
+
+Thread 139949838079744 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949678618368 (A guy) has entered the bathroom
+
+Thread 139949796116224 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.428: Min wait 0.352: Average wait: 0.390
+
+
+Thread 139949854865152 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.478: Min wait 0.359: Average wait: 0.419
+
+
+Thread 139949787723520 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.391: Min wait 0.391: Average wait: 0.391
+
+
+Thread 139949728974592 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.374: Min wait 0.374: Average wait: 0.374
+
+
+Thread 139949997541120 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949821294336 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.412: Min wait 0.372: Average wait: 0.392
+
+
+Thread 139949896828672 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.600: Min wait 0.371: Average wait: 0.486
+
+
+Thread 139949678618368 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949670225664 (A guy) has entered the bathroom
+
+Thread 139949670225664 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949687011072 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949913614080 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.629: Min wait 0.429: Average wait: 0.529
+
+BATHROOM IS EMPTY
+
+
+Thread 139949695403776 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949703796480 (A gal) has entered the bathroom
+139949938792192 (A gal) has entered the bathroom
+
+Thread 139949703796480 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 4.933: Min wait 4.933: Average wait: 4.933
+
+BATHROOM IS EMPTY
+
+
+Thread 139949938792192 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 4.935: Min wait 4.935: Average wait: 4.935
+
+139949653440256 (A gal) has entered the bathroom
+139949619869440 (A gal) has entered the bathroom
+
+Thread 139949653440256 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+
+Thread 139949619869440 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949569513216 (A gal) has entered the bathroom
+139949980755712 (A gal) has entered the bathroom
+139949577905920 (A gal) has entered the bathroom
+139949712189184 (A gal) has entered the bathroom
+
+Thread 139949980755712 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 5.070: Min wait 5.070: Average wait: 5.070
+
+
+Thread 139949569513216 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949603084032 (A gal) has entered the bathroom
+139949645047552 (A gal) has entered the bathroom
+Yes, 139949628262144 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949594691328 (A gal) has entered the bathroom
+139949611476736 (A gal) has entered the bathroom
+
+Thread 139949712189184 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 5.187: Min wait 5.187: Average wait: 5.187
+
+139949586298624 (A gal) has entered the bathroom
+
+Thread 139949577905920 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949636654848 (A gal) has entered the bathroom
+139949661832960 (A gal) has entered the bathroom
+
+Thread 139949603084032 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949544335104 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+Yes, 139949552727808 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+139949561120512 (A gal) has entered the bathroom
+
+Thread 139949611476736 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949586298624 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949535942400 (A guy) am waiting because the bathroom is occupied with the opposite gender.
+
+Thread 139949636654848 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+BATHROOM IS EMPTY
+
+
+Thread 139949661832960 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+
+Thread 139949561120512 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949544335104 (A guy) has entered the bathroom
+139949552727808 (A guy) has entered the bathroom
+
+Thread 139949544335104 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.592: Min wait 0.592: Average wait: 0.592
+
+139949535942400 (A guy) has entered the bathroom
+
+Thread 139949535942400 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.634: Min wait 0.634: Average wait: 0.634
+
+BATHROOM IS EMPTY
+
+
+Thread 139949552727808 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.610: Min wait 0.610: Average wait: 0.610
+
+
+Thread 139949645047552 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949628262144 (A guy) has entered the bathroom
+
+Thread 139949594691328 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+Yes, 139949527549696 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+BATHROOM IS EMPTY
+
+
+Thread 139949628262144 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 1.817: Min wait 1.817: Average wait: 1.817
+
+139949527549696 (A gal) has entered the bathroom
+BATHROOM IS EMPTY
+
+
+Thread 139949527549696 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.121: Min wait 0.121: Average wait: 0.121
+
+139949519156992 (A gal) has entered the bathroom
+BATHROOM IS EMPTY
+
+
+Thread 139949519156992 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949493978880 (A guy) has entered the bathroom
+Yes, 139949510764288 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+BATHROOM IS EMPTY
+
+
+Thread 139949493978880 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949502371584 (A guy) has entered the bathroom
+Yes, 139949510764288 (A gal) am waiting because the bathroom is occupied with the opposite gender.
+BATHROOM IS EMPTY
+
+
+Thread 139949502371584 has finished:
+Gender: A Guy
+Number of loops: 1
+Max wait 0.000: Min wait 0.000: Average wait: 0.000
+
+139949510764288 (A gal) has entered the bathroom
+BATHROOM IS EMPTY
+
+
+Thread 139949510764288 has finished:
+Gender: A Gal
+Number of loops: 1
+Max wait 0.623: Min wait 0.079: Average wait: 0.351
+
+
+Statistics of Bathroom:
+Total threads: 100
+Number of times bathroom used: 104
+Total time bathroom was not empty (microsseconds): 10.916
