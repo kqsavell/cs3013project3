@@ -1,0 +1,37 @@
+Project 3
+Kyle Savell & Antony Qin
+
+FILES:
+p3.c
+bathroomSim.c
+bathroom.h
+Makefile
+test1.txt
+test2.txt
+test3.txt
+
+HOW TO RUN PROGRAM:
+Open linux terminal 
+Run make
+Run ./p3 [numUsers] [meanLoopCount] [meanArrival] [meanStay]
+or Run ./p3, which defaults to the command ./p3 [2] [3] [10] [10] (recommended settings)
+
+CONTROL MODULE: HOW IT WORKS, INVARIANTS:
+Bathroom module has struct containing status (bathroom->status), current people (bathroom->currPpl), as well as other things such as timeval structs for timing, and number of usages (bathroom->numUsages). Also includes functions Enter(), Leave(), Initialize(), Finalize(). Initialize() mallocs a bathroom struct and initializes the values of the struct. Enter() is called by a thread to attempt to enter the bathroom. Leave() is called by a thread to attempt to leave the bathroom. Finalize() is called once all the threads exit and prints total # of excecuted threads, total number of times the bathroom was used, and total amount of time bathroom was not empty. To keep track of the number of executed threads, a global variable is defined and incremented if pthread_create does not fail. In order to exit the main() function cleanly, it calls pthread_wait on every successfully created pthread after the loop creating pthreads in order not to block. 
+Lock "lock" called in Enter() function. Thread comes in, cannot modify bathroom->status or bathroom->currPpl unless it has the lock. Thread can exit Enter() function only if it is the same gender as bathroom->status (or bathroom->status is vacant). Before thread exits Enter(), bathroom->status is the gender of the thread, and bathroom->currPpl is +1 greater than before the thread entered. Threads that can't exit Enter(), wait for a signal. 
+Lock "lock" called in Leave() function. Thread comes in, cannot modify bathroom->status or bathroom->currPpl unless it has the lock. Before thread exits Leave(), bathroom->currPpl is -1 less than before the thread entered. After bathroom->currPpl is decremented, before the thread leaves Leave(), if bathroom->currPpl is 0, then bathroom->status is vacant, and a signal is sent to all the theads waiting in the Enter() function. 
+Threads that have received the signal in Enter, recheck that the bathroom->status is their repectie gender/vacant with a while loop, before continuing to exit the Enter() function.
+(Invariant 1) Therefore: Only one thread (person) at a time can modify bathroom->currPeople and bathroom->status.
+(Invariant 2) Therefore: No two users of the opposite gender are in the bathroom at the same time.
+Lock "plock" called before any thread prints its statistics or actions (such as entering the bathroom). Then the thread prints its statistics in full, before releasing the lock. 
+(Invariant 3) Therefore: Each thread will print its statistics in full, without merging its statistics with any other thread's print lines.
+
+TEST CASES:
+./p3 [100] [1] [10] [10]
+Piped to test1.txt
+
+./p3 [1] [1] [1] [1]
+Piped to test2.txt
+
+./p3 [500] [1] [10] [10]
+Piped to test3.txt
